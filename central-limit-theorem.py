@@ -16,6 +16,6 @@ sampled_means = []
 for i in range(0,1000):
     # Take a random sample of 100 rows from the population, take the mean of those rows, append to sampled_means
     sampled_means.append(population.sample(n=100).mean().values[0])
-
+    #Create a histogram with the samples_means
     pd.Series(sampled_means).hist(bins=100)
 pd.Series(sampled_means).mean()
